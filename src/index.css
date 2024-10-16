@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Poppins', sans-serif;
+  @apply bg-green-50;
+}
+
+.app-logo {
+  width: 80px;
+  height: 80px;
+  background-image: url('/logo.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.app-logo:hover {
+  transform: scale(1.05);
+}
+
+.swipe-card {
+  transition: transform 0.3s ease-out;
+}
+
+.swipe-card:hover {
+  transform: scale(1.02);
+}
+
+.nav-icon {
+  @apply text-white opacity-70 hover:opacity-100 transition-opacity duration-200;
+}
+
+.nav-icon.active {
+  @apply opacity-100;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
